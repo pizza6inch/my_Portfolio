@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slide-in {
+  0% {
+    display: absolute;
+    opacity: 0;
+    top: 48px;
+    left: 128px;
+  }
+  100% {
+    display: absolute;
+    opacity: 1;
+    top: 48px;
+    left: -32px;
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.slide-out {
+  animation: slide-out 0.5s ease-in-out;
+}
