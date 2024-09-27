@@ -11,9 +11,11 @@ import "./index.css";
 
 function App() {
   return (
-    <div className="bg-slate-900">
-      <Navbar />
-      <Hero />
+    <div className="bg-slate-900 relative ">
+      <div className="bg-hero-pattern">
+        <Navbar />
+        <Hero />
+      </div>
       <About />
       <Experience />
       <Projects />

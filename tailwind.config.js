@@ -15,6 +15,9 @@ export default {
       sans: ['Poppins', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    backgroundImage: {
+      "hero-pattern": "url('/src/assets/herobg.png')",
+    },
   },
   plugins: [],
 
