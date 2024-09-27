@@ -10,11 +10,11 @@ const Navbar: React.FC = () => {
   const deviceType: string = useDeviceType();
   const [showDropdown, setShowDropdown] = React.useState(false);
   return (
-    <section className=" sticky top-0 w-full h-fit z-10">
+    <nav className=" flex top-0 w-full h-fit z-10">
       <div className="flex items-center justify-between m-auto  lg:w-9/12 w-11/12 h-12 pt-8">
         <div className="">
           {/* <Logo /> */}
-          <a className=" font-sans text-xl  text-white font-bold" href="/">
+          <a className=" font-sans text-xl  text-white font-bold" href="#hero">
             Ewan | Pizza6inch
           </a>
         </div>
@@ -24,7 +24,10 @@ const Navbar: React.FC = () => {
               {["About", "Experience", "Project", "Contact"].map(
                 (item, index) => (
                   <li key={index}>
-                    <a className="text-slate-400 hover:text-white cursor-pointer text-xl">
+                    <a
+                      className="text-slate-400 hover:text-white cursor-pointer text-xl"
+                      href={`#${item.toLocaleLowerCase()}`}
+                    >
                       {item}
                     </a>
                   </li>
@@ -51,7 +54,10 @@ const Navbar: React.FC = () => {
               {["About", "Experience", "Project", "Contact"].map(
                 (item, index) => (
                   <li key={index}>
-                    <a className="block px-4 py-4  text-white cursor-pointer">
+                    <a
+                      className="block px-4 py-4  text-white cursor-pointer"
+                      href={`#${item.toLocaleLowerCase()}`}
+                    >
                       {item}
                     </a>
                   </li>
@@ -61,7 +67,7 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
-    </section>
+    </nav>  
   );
 };
 

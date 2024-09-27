@@ -23,6 +23,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  ntut,
+  ez,
 } from "../assets";
 
 export const navLinks = [
@@ -116,11 +118,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Bachelor of Computer Science",
+    company_name: "National Taipei University of Technology",
+    icon: ntut,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2020 - Now",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -129,9 +131,9 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Intern",
+    company_name: "EZTravel",
+    icon: ez,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -142,8 +144,8 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Frontend Intern",
+    company_name: "EZTravel",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
