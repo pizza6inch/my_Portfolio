@@ -3,9 +3,10 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import Projects from "./components/Projects";
+import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Tech from "./components/Tech";
 
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -13,14 +14,15 @@ import "./index.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-slate-900 relative ">
+      <div className="bg-main relative ">
         <div className="bg-hero-pattern">
           <Navbar />
           <Hero />
         </div>
         <About />
         <Experience />
-        <Projects />
+        <Tech />
+        <Works />
         <Contact />
         <Footer />
       </div>

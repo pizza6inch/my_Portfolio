@@ -42,9 +42,9 @@ const Pizza = ({ isMobile, rotation }: PizzaProps) => {
 const PizzaCanvas = () => {
   const deviceType = useDeviceType();
   const [rotation, setRotation] = useState([0, -2.5, 0]);
-  useInterval(() => {
-    setRotation([rotation[0], rotation[1] + 0.01, rotation[2]]);
-  }, 1000 / 60);
+  // useInterval(() => {
+  //   setRotation([rotation[0], rotation[1] + 0.01, rotation[2]]);
+  // }, 1000 / 60);
 
   return (
     <Canvas

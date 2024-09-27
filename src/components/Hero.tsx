@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className=" w-full h-screen relative">
+    <section id="hero" className=" w-full h-screen relative cursor-grab">
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -33,9 +33,10 @@ const Hero: React.FC = () => {
           </p>
         </div>
       </div>
+
       <PizzaCanvas />
 
-      <div className="absolute bottom-64 lg:bottom-20 w-full flex justify-center items-center">
+      <div className="absolute bottom-4 lg:bottom-0 w-full h-80 flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div

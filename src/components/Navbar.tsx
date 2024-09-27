@@ -1,11 +1,9 @@
 import React from "react";
 
-// import Logo from "./Logo";
 import useDeviceType from "../hooks/useDeviceType";
 
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
-// import logo from "../assets/logo.svg";
 const Navbar: React.FC = () => {
   const deviceType: string = useDeviceType();
   const [showDropdown, setShowDropdown] = React.useState(false);
@@ -21,7 +19,7 @@ const Navbar: React.FC = () => {
         {deviceType === "PC" && (
           <div>
             <ul className="flex items-center space-x-6">
-              {["About", "Experience", "Project", "Contact"].map(
+              {["About", "Experience", "Works", "Contact"].map(
                 (item, index) => (
                   <li key={index}>
                     <a
@@ -51,23 +49,21 @@ const Navbar: React.FC = () => {
                   : " absolute top-12 -left-28 slide-in"
               }  black-gradient py-1 w-36 rounded-xl z-20`}
             >
-              {["About", "Experience", "Project", "Contact"].map(
-                (item, index) => (
-                  <li key={index}>
-                    <a
-                      className="block px-4 py-4  text-white cursor-pointer"
-                      href={`#${item.toLocaleLowerCase()}`}
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {["About", "Experience", "Work", "Contact"].map((item, index) => (
+                <li key={index}>
+                  <a
+                    className="block px-4 py-4  text-white cursor-pointer"
+                    href={`#${item.toLocaleLowerCase()}`}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         )}
       </div>
-    </nav>  
+    </nav>
   );
 };
 

@@ -8,7 +8,16 @@ import "react-vertical-timeline-component/style.min.css";
 
 import { experiences } from "../constants";
 
-const ExperienceCard = ({ experience }) => {
+type ExperienceType = {
+  title: string;
+  company_name: string;
+  date: string;
+  icon: string;
+  iconBg: string;
+  points: string[];
+};
+
+const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -54,7 +63,7 @@ const ExperienceCard = ({ experience }) => {
 
 const Experience: React.FC = () => {
   return (
-    <>
+    <section id="exprience" className="w-11/12 lg:w-9/12 m-auto">
       <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
         Experience
       </h2>
@@ -72,7 +81,7 @@ const Experience: React.FC = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -31,6 +31,7 @@ import ez from "./company/ez.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import pizzaFlix from "./pizzaFlix.png";
 
 export {
   logo,
@@ -63,4 +64,5 @@ export {
   tripguide,
   ntut,
   ez,
+  pizzaFlix,
 };
