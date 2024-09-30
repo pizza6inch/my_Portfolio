@@ -7,10 +7,11 @@ const About: React.FC = () => {
       <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Overview.</h3>
 
       <p className=" mt-4 text-[#aaa6c3] text-[17px] max-w-3xl leading-[30px]">
-        I'm a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks like
-        React, Node.js, and Three.js. I'm a quick learner and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to
-        life!
+        I am a self-taught web developer with strong expertise in TypeScript and JavaScript, and extensive experience
+        working with modern frameworks like React, Node.js, and Next.js. I’m passionate about learning new technologies
+        and problem-solving, whether working independently or as part of a collaborative team. My self-learning ability
+        allow me to effectively contribute to diverse projects and deliver efficient, scalable solutions. Let’s build
+        something great together!
       </p>
     </section>
   );

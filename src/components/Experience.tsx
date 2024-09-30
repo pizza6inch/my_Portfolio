@@ -3,7 +3,7 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { experiences } from "../constants";
+import { experiences } from "../constants/index";
 
 type ExperienceType = {
   title: string;

@@ -32,12 +32,14 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import pizzaFlix from "./pizzaFlix.png";
+import portfolio from "./portfolio.png";
 
 import githubSvg from "./github.svg";
 import instagramSvg from "./instagram.svg";
 
 export {
   // logo,
+  portfolio,
   githubSvg,
   instagramSvg,
   backend,

@@ -1,10 +1,7 @@
-import React from "react";
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
 
 import github from "../assets/github.png";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { projects } from "../constants/index";
 
 type ProjectCardProps = {
   name: string;
@@ -12,7 +9,8 @@ type ProjectCardProps = {
   tags: { name: string; color: string }[];
   image: string;
   source_code_link: string;
-  live_demo_link: string;
+  live_demo_link?: string;
+  index: number;
 };
 
 const ProjectCard = ({ name, description, tags, image, source_code_link }: ProjectCardProps) => {

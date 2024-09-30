@@ -1,5 +1,5 @@
 import BallCanvas from "./canvas/BallCanvas";
-import { technologies } from "../constants";
+import { technologies } from "../constants/index";
 
 const Tech = () => {
   return (
