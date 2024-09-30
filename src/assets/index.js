@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -26,15 +26,20 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import ntut from "./company/ntut.jpg";
-import ez from "./company/ez.png";
+import eztravel from "./company/eztravel.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import pizzaFlix from "./pizzaFlix.png";
 
+import githubSvg from "./github.svg";
+import instagramSvg from "./instagram.svg";
+
 export {
-  logo,
+  // logo,
+  githubSvg,
+  instagramSvg,
   backend,
   creator,
   mobile,
@@ -63,6 +68,6 @@ export {
   jobit,
   tripguide,
   ntut,
-  ez,
+  eztravel,
   pizzaFlix,
 };

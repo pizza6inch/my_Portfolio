@@ -7,6 +7,7 @@ import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Tech from "./components/Tech";
+import StarsCanvas from "./components/canvas/StarsCanvas";
 
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -23,7 +24,10 @@ function App() {
         <Experience />
         <Tech />
         <Works />
-        <Contact />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

@@ -13,12 +13,6 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  interface FormState {
-    name: string;
-    email: string;
-    message: string;
-  }
-
   interface ChangeEvent {
     target: {
       name: string;
@@ -26,9 +20,7 @@ const Contact = () => {
     };
   }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { target } = e as ChangeEvent;
     const { name, value } = target;
 
@@ -48,10 +40,11 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Ewan",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "pizza6inch@gmail.com",
           message: form.message,
+          reply_to: form.email,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
@@ -74,70 +67,61 @@ const Contact = () => {
         }
       );
   };
-
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
-      <div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
-        <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-          Contact
-        </h3>
-        <p className="text-white mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Get in touch
-        </p>
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
+    <section id="contact" className="w-11/12 lg:w-9/12 m-auto pt-16">
+      <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+        <div className="flex-[0.75] bg-[#100d25] p-8 rounded-2xl">
+          <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
+          <p className="text-white mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">Get in touch</p>
+          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+            <label className="flex flex-col">
+              <span className="text-white font-bold mb-4">Your Name</span>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your good name?"
+                className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-bold mb-4">Your email</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your web address?"
+                className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-bold mb-4">Your Message</span>
+              <textarea
+                rows={7}
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="What you want to say?"
+                className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </div>
+            <button
+              type="submit"
+              className="bg-slate-800 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </div>
 
-      <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <BigPizzaCanvas />
+        <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+          <BigPizzaCanvas />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

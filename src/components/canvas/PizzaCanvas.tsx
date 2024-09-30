@@ -10,10 +10,9 @@ import useDeviceType from "../../hooks/useDeviceType";
 
 type PizzaProps = {
   isMobile: Boolean;
-  rotation: number[];
 };
 
-const Pizza = ({ isMobile, rotation }: PizzaProps) => {
+const Pizza = ({ isMobile }: PizzaProps) => {
   const pizza = useGLTF("./pizza/scene.gltf");
 
   return (
@@ -33,7 +32,7 @@ const Pizza = ({ isMobile, rotation }: PizzaProps) => {
         object={pizza.scene}
         scale={isMobile ? 0.5 : 1}
         position={isMobile ? [0, -1, 0] : [0, -2, 0]}
-        rotation={rotation}
+        rotation={[0, -2.5, 0]}
       />
     </mesh>
   );
@@ -41,10 +40,6 @@ const Pizza = ({ isMobile, rotation }: PizzaProps) => {
 
 const PizzaCanvas = () => {
   const deviceType = useDeviceType();
-  const [rotation, setRotation] = useState([0, -2.5, 0]);
-  // useInterval(() => {
-  //   setRotation([rotation[0], rotation[1] + 0.01, rotation[2]]);
-  // }, 1000 / 60);
 
   return (
     <Canvas
@@ -55,12 +50,8 @@ const PizzaCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Pizza isMobile={deviceType === "mobile"} rotation={rotation} />
+        <OrbitControls autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+        <Pizza isMobile={deviceType === "mobile"} />
       </Suspense>
 
       <Preload all />
