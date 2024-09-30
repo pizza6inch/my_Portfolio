@@ -15,7 +15,7 @@ type ProjectCardProps = {
   live_demo_link: string;
 };
 
-const ProjectCard = ({ name, description, tags, image, source_code_link, live_demo_link }: ProjectCardProps) => {
+const ProjectCard = ({ name, description, tags, image, source_code_link }: ProjectCardProps) => {
   return (
     <div
       className="w-full lg:w-[360px]"

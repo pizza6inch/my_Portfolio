@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
         {deviceType === "PC" && (
           <div>
             <ul className="flex items-center space-x-6">
-              {["About", "Experience", "Works", "Contact"].map((item, index) => (
+              {["About", "Experience", "Projects", "Contact"].map((item, index) => (
                 <li key={index}>
                   <a
                     className="text-slate-400 hover:text-white cursor-pointer text-xl"
