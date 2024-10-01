@@ -7,14 +7,7 @@ import CanvasLoader from "../Loader";
 const BigPizza = () => {
   const bigPizza = useGLTF("./bigPizza/scene.gltf");
 
-  return (
-    <primitive
-      object={bigPizza.scene}
-      scale={0.03}
-      position-y={0}
-      rotation-y={2}
-    />
-  );
+  return <primitive object={bigPizza.scene} scale={0.03} position-y={0} rotation-y={2} />;
 };
 
 const BigPizzaCanvas = () => {
@@ -23,8 +16,8 @@ const BigPizzaCanvas = () => {
       <Canvas
         shadows
         // frameloop="demand"
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
+        dpr={1}
+        gl={{ preserveDrawingBuffer: false }}
         camera={{
           fov: 45,
           near: 0.1,
