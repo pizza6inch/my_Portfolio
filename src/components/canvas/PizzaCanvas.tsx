@@ -1,9 +1,6 @@
-import React, { Suspense, useState, useRef, useEffect } from "react";
-import { useInterval } from "react-use";
-
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import { Mesh } from "three";
 
 import CanvasLoader from "../Loader";
 import useDeviceType from "../../hooks/useDeviceType";
@@ -50,7 +47,12 @@ const PizzaCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <Pizza isMobile={deviceType === "mobile"} />
       </Suspense>
 

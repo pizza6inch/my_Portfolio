@@ -10,11 +10,13 @@ type StarsProps = {
 const Stars = (props: StarsProps) => {
   const ref = useRef<THREE.Points>(null!);
   const [sphere] = useState(() => {
-    const array = Float32Array.from(random.inSphere(new Float64Array(5000), { radius: 1.2 }));
+    const array = Float32Array.from(
+      random.inSphere(new Float64Array(5000), { radius: 1.2 })
+    );
     const vector = new THREE.Vector3().fromArray(array);
     return vector;
   });
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;
@@ -23,7 +25,13 @@ const Stars = (props: StarsProps) => {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} position={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial transparent color="#f272c8" size={0.002} sizeAttenuation={true} depthWrite={false} />
+        <PointMaterial
+          transparent
+          color="#f272c8"
+          size={0.002}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
       </Points>
     </group>
   );

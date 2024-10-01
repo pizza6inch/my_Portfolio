@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
@@ -7,7 +7,14 @@ import CanvasLoader from "../Loader";
 const BigPizza = () => {
   const bigPizza = useGLTF("./bigPizza/scene.gltf");
 
-  return <primitive object={bigPizza.scene} scale={0.03} position-y={0} rotation-y={2} />;
+  return (
+    <primitive
+      object={bigPizza.scene}
+      scale={0.03}
+      position-y={0}
+      rotation-y={2}
+    />
+  );
 };
 
 const BigPizzaCanvas = () => {
