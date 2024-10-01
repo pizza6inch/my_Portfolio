@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 import useDeviceType from "../../hooks/useDeviceType";
 
 type PizzaProps = {
-  isMobile: Boolean;
+  isMobile: boolean;
 };
 
 const Pizza = ({ isMobile }: PizzaProps) => {
@@ -47,12 +47,7 @@ const PizzaCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        <OrbitControls autoRotate enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
         <Pizza isMobile={deviceType === "mobile"} />
       </Suspense>
 

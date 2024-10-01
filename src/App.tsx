@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="bg-main relative ">
-        <div className="bg-hero-pattern">
+        <div className="bg-cyan-950">
           <Navbar />
           <Hero />
         </div>
