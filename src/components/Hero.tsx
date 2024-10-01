@@ -3,8 +3,10 @@ import React from "react";
 import PizzaCanvas from "./canvas/PizzaCanvas";
 
 import { motion } from "framer-motion";
+import useDeviceType from "../hooks/useDeviceType";
 
 const Hero: React.FC = () => {
+  const deviceType = useDeviceType();
   return (
     <section id="hero" className=" w-full h-screen relative cursor-grab">
       <div className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -23,8 +25,7 @@ const Hero: React.FC = () => {
           </p>
         </div>
       </div>
-
-      <PizzaCanvas />
+      {deviceType === "PC" && <PizzaCanvas />}
 
       <div className="absolute bottom-4 lg:bottom-0 w-full h-60 lg:h-40 flex justify-center items-center">
         <a href="#about">

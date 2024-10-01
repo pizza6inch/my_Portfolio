@@ -6,9 +6,7 @@ import * as THREE from "three";
 
 const Stars = () => {
   const ref = useRef<THREE.Points>(null!);
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
-  );
+  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
   useFrame((_, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -17,19 +15,8 @@ const Stars = () => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points
-        ref={ref}
-        positions={sphere as Float32Array}
-        stride={3}
-        frustumCulled
-      >
-        <PointMaterial
-          transparent
-          color="#f272c8"
-          size={0.002}
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
+      <Points ref={ref} positions={sphere as Float32Array} stride={3} frustumCulled>
+        <PointMaterial transparent color="#f272c8" size={0.002} sizeAttenuation={true} depthWrite={false} />
       </Points>
     </group>
   );

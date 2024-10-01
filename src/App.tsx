@@ -6,7 +6,7 @@ import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Tech from "./components/Tech";
-// import StarsCanvas from "./components/canvas/StarsCanvas";
+import StarsCanvas from "./components/canvas/StarsCanvas";
 
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="bg-main relative ">
-        <div className="bg-cyan-950 lg:bg-hero-pattern">
+        <div className="bg-hero-pattern">
           <Navbar />
           <Hero />
         </div>
@@ -25,7 +25,7 @@ function App() {
         <Works />
         <div className="relative z-0">
           <Contact />
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
         </div>
         <Footer />
       </div>
