@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Preload, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 import useDeviceType from "../../hooks/useDeviceType";
