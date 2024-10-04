@@ -20,7 +20,9 @@ const Contact = () => {
     };
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { target } = e as ChangeEvent;
     const { name, value } = target;
 
@@ -69,11 +71,21 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="w-11/12 lg:w-9/12 m-auto pt-16">
-      <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
+      <div
+        className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      >
         <div className="flex-[0.75] bg-[#100d25] p-8 rounded-2xl">
-          <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
-          <p className="text-white mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">Get in touch</p>
-          <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+          <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+            Contact
+          </h3>
+          <p className="text-white mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+            Get in touch
+          </p>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-12 flex flex-col gap-8"
+          >
             <label className="flex flex-col">
               <span className="text-white font-bold mb-4">Your Name</span>
               <input
@@ -110,7 +122,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="bg-slate-800 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+              className="bg-slate-800 hover:bg-[#EE534F] transition-colors  py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
             >
               {loading ? "Sending..." : "Send"}
             </button>
