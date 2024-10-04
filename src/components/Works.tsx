@@ -35,7 +35,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-slate-700 p-5 rounded-2xl   w-full"
+        className="bg-slate-700 p-5 rounded-2xl  w-full"
       >
         <div className="relative w-full h-[230px] ">
           <img
@@ -83,10 +83,10 @@ const Works = () => {
   return (
     <section id="projects" className="w-11/12 lg:w-9/12 m-auto pt-16">
       <p className="mt-4 text-[#aaa6c3] text-[17px] max-w-3xl leading-[30px]">
-        My work
+        {language === "en" ? "My work" : "我的作品"}
       </p>
       <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-        Projects.
+        {language === "en" ? "Projects" : "專案"}
       </h2>
       {language === "en" ? (
         <p className="text-[#aaa6c3] w-full mt-3 text-[22px] max-w-3xl ">
@@ -103,8 +103,7 @@ const Works = () => {
         <p className="text-[#aaa6c3] w-full mt-3 text-[22px] max-w-3xl ">
           以下專案展現了我的技能和經驗，包含專案的實際開發。{" "}
           <span className="text-[#EE534F]">
-            每個專案都有簡要描述，其中包含github的連結，內部包含了live
-            demo可以參觀。
+            每個專案都有簡要描述，其中包含github的連結與live demo可以參觀。
           </span>{" "}
           這些專案反映了我解決複雜問題、使用不同技術和有效管理頁面狀態的能力。
         </p>

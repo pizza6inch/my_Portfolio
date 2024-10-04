@@ -13,8 +13,6 @@ const Navbar: React.FC = () => {
   const [showDropdown, setShowDropdown] = React.useState(false);
   const [scroll, setScroll] = React.useState(false);
 
-  console.log(language);
-
   const navItems = [
     {
       en: "About",

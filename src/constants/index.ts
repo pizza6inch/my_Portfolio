@@ -127,7 +127,7 @@ const projects = [
     name: "PizzaFlix",
     description: {
       en: "Web application that enables users to search the most up-to-date movie/tv show information, also user can add their favorite movies to their favorites and comment on it.",
-      cn: "網頁應用程式，用戶可以搜索最新的電影/電視節目信息，也可以將喜歡的電影添加到收藏夾並對其進行評論。",
+      cn: "一個neflix clone，使用者可以透過網站搜索最新的電影/電視節目訊息，也可以將喜歡的電影添加到收藏夾並對其進行評論。",
     },
 
     tags: [
@@ -152,7 +152,7 @@ const projects = [
     name: "Portfolio",
     description: {
       en: "A personal portfolio website that showcases my projects, skills, and experiences.technologies including threejs 3D model and some motion animation.",
-      cn: "個人作品集網站，展示了我的項目、技能和經驗。技術包括 threejs 3D 模型和一些動畫。",
+      cn: "個人網站，展示了我的作品集、技能和經驗。其中技術包括 threejs 3D 模型和一些動畫。",
     },
     tags: [
       {

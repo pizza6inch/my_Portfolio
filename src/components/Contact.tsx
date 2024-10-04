@@ -3,7 +3,10 @@ import emailjs from "@emailjs/browser";
 
 import BigPizzaCanvas from "./canvas/BigPizzaCanvas.tsx";
 
+import { useLanguage } from "./LanguageContext";
+
 const Contact = () => {
+  const { language } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
@@ -76,10 +79,10 @@ const Contact = () => {
       >
         <div className="flex-[0.75] bg-[#100d25] p-8 rounded-2xl">
           <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-            Contact
+            {language === "en" ? "Contact" : "聯繫"}
           </h3>
           <p className="text-white mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            Get in touch
+            {language === "en" ? "Get in touch" : "聯繫我"}
           </p>
           <form
             ref={formRef}
@@ -87,35 +90,49 @@ const Contact = () => {
             className="mt-12 flex flex-col gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-white font-bold mb-4">Your Name</span>
+              <span className="text-white font-bold mb-4">
+                {language === "en" ? "Your Name" : "你的名子"}
+              </span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder={
+                  language === "en" ? "What's your good name?" : "怎麼稱呼你?"
+                }
                 className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-bold mb-4">Your email</span>
+              <span className="text-white font-bold mb-4">
+                {language === "en" ? "Your email" : "電子郵件"}
+              </span>
               <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder={
+                  language === "en"
+                    ? "What's your web address?"
+                    : "你的電子郵件地址是?"
+                }
                 className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-white font-bold mb-4">Your Message</span>
+              <span className="text-white font-bold mb-4">
+                {language === "en" ? "Your Message" : "你的訊息"}
+              </span>
               <textarea
                 rows={7}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What you want to say?"
+                placeholder={
+                  language === "en" ? "What you want to say?" : "你想說什麼呢?"
+                }
                 className="bg-[#151030] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
               />
             </label>
@@ -124,7 +141,13 @@ const Contact = () => {
               type="submit"
               className="bg-slate-800 hover:bg-[#EE534F] transition-colors  py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
             >
-              {loading ? "Sending..." : "Send"}
+              {language === "en"
+                ? loading
+                  ? "Sending..."
+                  : "Send"
+                : loading
+                ? "發送中..."
+                : "發送"}
             </button>
           </form>
         </div>
