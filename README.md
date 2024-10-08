@@ -57,5 +57,4 @@ The portfolio includes:
 
 ## Credits
 
-- UI design inspired by [adrianhajdin/project_3D_developer_portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio), I studied its approach and then independently built my own version using **TypeScript** and  
-  **add the feature of switching to Chinese version.**
+- UI design inspired by [adrianhajdin/project_3D_developer_portfolio](https://github.com/adrianhajdin/project_3D_developer_portfolio), I studied its approach and then independently built my own version using **TypeScript** and **add the feature of switching to Chinese version.**
