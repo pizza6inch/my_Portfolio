@@ -20,9 +20,9 @@ cd /my_portfolio
 npm install
 ```
 
-2. Sign up for an [EmailJS](https://www.emailjs.com/) account
-3. Create an email service and email template on EmailJS.
-4. Set up environment variables in a .env file:
+2. **Sign up for an [EmailJS](https://www.emailjs.com/) account**
+3. **Create an email service and email template on EmailJS.**
+4. **Set up environment variables in a .env file:**
 
 ```py
 VITE_APP_EMAILJS_SERVICE_ID = <service_qwer1234> # replace it with your service ID
@@ -30,7 +30,7 @@ VITE_APP_EMAILJS_TEMPLATE_ID = <template_qwer1234> # replace it with your templa
 VITE_APP_EMAILJS_PUBLIC_KEY = <myPublicKey> # replace it with your public key
 ```
 
-5. start the app & open [localhost](http://localhost:5173)
+5. **start the app & open [localhost](http://localhost:5173)**
 
 ```
 npm run dev
