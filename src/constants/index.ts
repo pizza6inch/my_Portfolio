@@ -10,6 +10,7 @@ import {
   mongodb,
   git,
   threejs,
+  nextjs,
   ntut,
   eztravel,
   pizzaFlix,
@@ -36,6 +37,10 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Next JS",
+    icon: nextjs,
   },
   {
     name: "Redux Toolkit",
